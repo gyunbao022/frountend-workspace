@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js013_operator.html</title>
+</head>
+<body>
+<script>
+        //자바스크립트는 존재론적으로 분석한다.
+      let check = b > a && "통과";
+      console.log(check); //통과
+
+
+      check = a > b && "통과";
+      console.log(check); //false
+
+
+      check = a > b || "실패";
+      console.log(check); //실패
+      check = a < b || "실패";
+      console.log(true);
+
+
+      check = b > a && null;
+      console.log(check); //null
+
+
+      check = b > a && undefined;
+      console.log(check); // undefined
+
+
+      check = b > a && 0;
+      console.log(check); //0
+
+
+      check = a > b && "ok";
+      console.log(check); //false
+
+
+      check = 0 && "ok";
+      console.log(check); //0
+
+
+      check = undefined && "ok";
+      console.log(check); //undefined
+
+
+      check = null && "ok";
+      console.log(check); //null
+
+
+      check = undefined || "ok";
+      console.log(check); //ok
+
+      /*
+       비교연산자 :  >, <, >=, <=, ==,  !=,  ===, !==
+
+       == : 메모리에 저장된 값만 비교
+       === : 메모리에 저장된 값과 데이터 타입 비교
+      */
+
+      let numX = 5;
+      let numY = 5;
+      console.log(`numX==numY:${numX == numY}`); //numX==numY:true
+      console.log(`numX===numY:${numX === numY}`); //numX===numY:true
+
+      let objX = new Number(numX);
+      let objY = new Number(numY);
+      console.log(`objX==objY:${objX == objY}`); //objX==objY:false
+      console.log(`objX===objY:${objX === objY}`); //objX===objY:false
+
+      let dataX = 3;
+      let dataY = "3";
+      console.log(`dataX==dataY:${dataX == dataY}`); //dataX==dataY:true
+      console.log(`dataX===dataY:${dataX === dataY}`); //dataX===dataY:false
+    </script>
+
+</script>
+</body>
+</html>
